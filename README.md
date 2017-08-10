@@ -1,0 +1,2 @@
+# gonne
+my  ai  friend
