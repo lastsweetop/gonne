@@ -1,7 +1,7 @@
-package main
+package tools
 
 import "fmt"
 
-func log(message string) {
+func Log(message string) {
 	fmt.Println(message)
 }
