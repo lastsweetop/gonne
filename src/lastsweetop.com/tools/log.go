@@ -2,6 +2,9 @@ package tools
 
 import "fmt"
 
-func Log(message string) {
+type Log struct {
+}
+
+func (*Log) Info(message string) {
 	fmt.Println(message)
 }
