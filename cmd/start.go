@@ -8,6 +8,7 @@ import (
 	"os"
 	"os/exec"
 
+	"github.com/lastsweetop/gonne/api"
 	"github.com/spf13/cobra"
 )
 
@@ -37,10 +38,7 @@ func init() {
 }
 
 func startHttp() {
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "Hello cmd!")
-	})
-	if err := http.ListenAndServe(":9090", nil); err != nil {
+	if err := http.ListenAndServe(":9090", api.NewAPIMux()); err != nil {
 		log.Fatal("ListenAndServe: ", err)
 	}
 }

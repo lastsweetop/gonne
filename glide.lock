@@ -1,6 +1,10 @@
-hash: 8417164e20d5495da2e82af8a28a8a97243aad2e61ae2c114a6f124c073a5db9
-updated: 2017-10-30T15:11:38.011247+08:00
+hash: 419bb574037e79265299cb0cf2b7f63f501edb4bfa2c650af98a6f05608ce531
+updated: 2017-10-30T15:53:34.843379+08:00
 imports:
+- name: github.com/gorilla/context
+  version: 08b5f424b9271eedf6f9f0ce86cb9396ed337a42
+- name: github.com/gorilla/mux
+  version: 7625a85c14e615274a4ee4bc8654f72310a563e4
 - name: github.com/inconshreveable/mousetrap
   version: 76626ae9c91c4f2a10f34cad8ce83ea42c93bb75
 - name: github.com/spf13/cobra
