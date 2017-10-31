@@ -14,7 +14,3 @@ func NewAPIMux() *mux.Router {
 	r.PathPrefix("/").Handler(http.StripPrefix("/", http.FileServer(http.Dir("web/"))))
 	return r
 }
-
-func HomeHandler(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("hello mux"))
-}

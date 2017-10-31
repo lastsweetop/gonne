@@ -38,7 +38,11 @@ func init() {
 }
 
 func startHttp() {
+	// if err := http.ListenAndServe(":9090", api.NewAPIMux()); err != nil {
+	// 	log.Fatal("ListenAndServe: ", err)
+	// }
 	if err := http.ListenAndServe(":9090", api.NewAPIMux()); err != nil {
 		log.Fatal("ListenAndServe: ", err)
 	}
+
 }

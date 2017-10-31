@@ -3,3 +3,11 @@ import:
 - package: github.com/spf13/cobra
   version: ^0.0.1
 - package: github.com/gorilla/mux
+- package: github.com/gin-gonic/gin
+- package: golang.org/x/sys
+  repo: https://github.com/golang/sys
+- package: gopkg.in/yaml.v2
+  repo: https://github.com/go-yaml/yaml
+- package: gopkg.in/go-playground/validator.v8
+  repo: https://github.com/go-playground/validator
+  version: 8.18.2
