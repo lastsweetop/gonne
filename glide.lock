@@ -1,41 +1,23 @@
-hash: 3f597d99f6c57e9dec22f12d04794caada44d0667e79a43d2ae6427317989524
-updated: 2017-10-31T12:32:20.135371+08:00
+hash: b101ab6154be1316a0d16675e5e3c29b40f87e54717f0c6c9b3487b84b3e822d
+updated: 2017-11-01T12:34:20.574221+08:00
 imports:
-- name: github.com/gin-contrib/sse
-  version: 22d885f9ecc78bf4ee5d72b937e4bbcdc58e8cae
 - name: github.com/gin-gonic/gin
   version: 6653d5d588740eb73d2245ef04d5a407d3c3f034
-  subpackages:
-  - binding
-  - json
-  - render
-- name: github.com/golang/protobuf
-  version: 1643683e1b54a9e88ad26d98f81400c8c9d9f4f9
-  subpackages:
-  - proto
 - name: github.com/gorilla/context
   version: 08b5f424b9271eedf6f9f0ce86cb9396ed337a42
 - name: github.com/gorilla/mux
   version: 7625a85c14e615274a4ee4bc8654f72310a563e4
 - name: github.com/inconshreveable/mousetrap
   version: 76626ae9c91c4f2a10f34cad8ce83ea42c93bb75
-- name: github.com/json-iterator/go
-  version: fbd210edfcc4a947bd86b68701590990ca3d6036
-- name: github.com/mattn/go-isatty
-  version: a5cdd64afdee435007ee3e9f6ed4684af949d568
+- name: github.com/pkg/errors
+  version: f15c970de5b76fac0b59abb32d62c17cc7bed265
 - name: github.com/spf13/cobra
   version: 7b2c5ac9fc04fc5efafb60700713d4fa609b777b
 - name: github.com/spf13/pflag
   version: a9789e855c7696159b7db0db7f440b449edf2b31
-- name: github.com/ugorji/go
-  version: d03304bb1d83c196fd3017dca37e89a4504b3676
-  subpackages:
-  - codec
 - name: golang.org/x/sys
-  version: 661970f62f5897bc0cd5fdca7e087ba8a98a8fa1
+  version: 95c6576299259db960f6c5b9b69ea52422860fce
   repo: https://github.com/golang/sys
-  subpackages:
-  - unix
 - name: gopkg.in/go-playground/validator.v8
   version: 5f1438d3fca68893a817e4a66806cea46a9e4ebf
   repo: https://github.com/go-playground/validator

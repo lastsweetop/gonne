@@ -3,27 +3,30 @@ package tools
 import (
 	"bytes"
 	"encoding/json"
-	"fmt"
+	"errors"
 	"io/ioutil"
 	"net/http"
 )
 
 // MarshalJson 把对象以json格式放到response中
-func MarshalJson(w http.ResponseWriter, v interface{}) error {
+func MarshalJson(w http.ResponseWriter, v interface{}) {
 	data, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-	fmt.Fprint(w, string(data))
-	return nil
+	ThrowError(err)
+	w.Write(data)
 }
 
 // UnMarshalJson 从request中取出对象
-func UnMarshalJson(req *http.Request, v interface{}) error {
+func UnMarshalJson(req *http.Request, v interface{}) {
 	result, err := ioutil.ReadAll(req.Body)
-	if err != nil {
-		return err
-	}
+	err = errors.New("TEST")
+	ThrowError(err)
 	json.Unmarshal([]byte(bytes.NewBuffer(result).String()), v)
-	return nil
+}
+
+func Reverse(s string) string {
+	r := []rune(s)
+	for i, j := 0, len(r)-1; i < len(r)/2; i, j = i+1, j-1 {
+		r[i], r[j] = r[j], r[i]
+	}
+	return string(r)
 }

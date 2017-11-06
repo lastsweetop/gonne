@@ -11,3 +11,4 @@ import:
 - package: gopkg.in/go-playground/validator.v8
   repo: https://github.com/go-playground/validator
   version: 8.18.2
+- package: github.com/pkg/errors

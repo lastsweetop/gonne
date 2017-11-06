@@ -4,10 +4,20 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
+	"github.com/lastsweetop/gonne/tools"
 )
 
-func NewAPIMux() *mux.Router {
-	r := mux.NewRouter()
+type MyRouter struct {
+	*mux.Router
+}
+
+func (r *MyRouter) ServeHTTP(w http.ResponseWriter, req *http.Request) {
+	defer tools.CatchError(w, req)
+	r.Router.ServeHTTP(w, req)
+}
+
+func NewAPIMux() http.Handler {
+	r := &MyRouter{mux.NewRouter()}
 	s := r.PathPrefix("/api").Subrouter()
 	initUserApi(s)
 
