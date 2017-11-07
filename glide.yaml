@@ -12,3 +12,4 @@ import:
   repo: https://github.com/go-playground/validator
   version: 8.18.2
 - package: github.com/pkg/errors
+- package: github.com/json-iterator/go
